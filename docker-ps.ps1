@@ -21,5 +21,5 @@ if(!(Test-Path $env:USERPROFILE\.ssh\id_rsa -PathType Leaf))
 Write-Host -ForegroundColor Green 'Stripping CRs from entrypoint shell script.'
 ((Get-Content $entrypoint) -join "`n") + "`n" | Set-Content -NoNewline $entrypoint
 
-docker build --progress=plain -t heb/debian-ansible ${PWD}
-docker run -it -v .:/ansible -v $env:USERPROFILE\.ssh:/tmp/.ssh:ro heb/debian-ansible /bin/bash
+docker build --progress=plain -t local/debian-ansible ${PWD}
+docker run -it -v .:/ansible -v $env:USERPROFILE\.ssh:/tmp/.ssh:ro local/debian-ansible /bin/bash

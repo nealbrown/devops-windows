@@ -1,8 +1,8 @@
 # Credit to "https://github.com/willhallonline/docker-ansible" and 
 # https://nickjanetakis.com/blog/docker-tip-56-volume-mounting-ssh-keys-into-a-docker-container
 # Usage
-# docker build --progress=plain -t heb/debian-ansible .
-# docker run -it -v .:/ansible -v $env:USERPROFILE\.ssh:/tmp/.ssh:ro heb/debian-ansible /bin/bash
+# docker build --progress=plain -t local/debian-ansible .
+# docker run -it -v .:/ansible -v $env:USERPROFILE\.ssh:/tmp/.ssh:ro local/debian-ansible /bin/bash
 FROM --platform=linux/amd64 debian:bookworm
 
 ARG ANSIBLE_CORE_VERSION=2.16.10

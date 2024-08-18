@@ -1,2 +1,2 @@
-# docker-windows
-Dockerfiles to Support Windows Host OS
+# devops-windows
+Dockerfiles, Helper Scripts, Ansible Playbooks, Powershell to Support Devops on Windows Host OSs
